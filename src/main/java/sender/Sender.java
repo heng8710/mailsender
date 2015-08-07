@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Strings;
 
-import conf.GlobalConfig;
+import conf.GlobalSetting;
 
 public class Sender {
 
@@ -31,7 +31,7 @@ public class Sender {
 	}
 	
 	private static void simpleSendEmail(final String to ,final String appKey, final String subject, final String text) throws Exception {
-		final Map<String,String> mailConfigs = (Map<String, String>) GlobalConfig.getByPath("mail");
+		final Map<String,String> mailConfigs = (Map<String, String>) GlobalSetting.getByPath("mail");
 		
 		// 创建Properties 对象
 		final Properties props = System.getProperties();
