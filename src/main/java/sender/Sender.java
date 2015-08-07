@@ -31,7 +31,7 @@ public class Sender {
 	}
 	
 	private static void simpleSendEmail(final String to ,final String appKey, final String subject, final String text) throws Exception {
-		final Map<String,String> mailConfigs = (Map<String, String>) GlobalConfig.get("mail");
+		final Map<String,String> mailConfigs = (Map<String, String>) GlobalConfig.getByPath("mail");
 		
 		// 创建Properties 对象
 		final Properties props = System.getProperties();
